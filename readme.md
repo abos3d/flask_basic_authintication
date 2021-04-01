@@ -1,3 +1,5 @@
+The below commands to set the mac for flask basic auth app
+
 ```groovy
 brew install postgresql
 ```
