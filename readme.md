@@ -1,8 +1,14 @@
+```groovy
 brew install postgresql
+```
 
+```groovy
 brew tap homebrew/services
+```
 
+```groovy
 brew services start postgresql
+```
 
 
 psql
@@ -14,7 +20,7 @@ grant all privileges on database sampledb1 to musab;
 Python Flask example:
 
 
-
+```python
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -94,14 +100,14 @@ def handle_car(car_id):
        db.session.delete(car)
        db.session.commit()
        return {"message": f"Car {car.name} successfully deleted."}
-
+```
 
 
 
 
 With Authentication:
 
-
+```python
 from os import abort
 
 from flask import Flask, request, jsonify, url_for, json, g
@@ -237,4 +243,4 @@ def verify_password(username, password):
        return False
    g.user = user
    return True
-
+```
