@@ -38,7 +38,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://musab:123qwe@localhost:5432/sampledb1" //musab is username and 123qwe is passowrd
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://musab:123qwe@localhost:5432/sampledb1" # musab is username and 123qwe is passowrd
 db = SQLAlchemy(app)
 db.create_all()
 migrate = Migrate(app, db)
@@ -130,7 +130,7 @@ from flask_httpauth import HTTPBasicAuth
 
 auth = HTTPBasicAuth()
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://musab:123qwe@localhost:5432/sampledb1"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://musab:123qwe@localhost:5432/sampledb1" # musab is username and 123qwe is passowrd
 db = SQLAlchemy(app)
 db.create_all()
 migrate = Migrate(app, db)
