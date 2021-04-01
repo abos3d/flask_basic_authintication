@@ -10,14 +10,26 @@ brew tap homebrew/services
 brew services start postgresql
 ```
 
-
+```groovy
 psql
+```
+```groovy
 create user musab;
+```
+
+```groovy
 alter user musab with encrypted password '123qwe';
+```
+```groovy
 create database sampleDB1;
+```
+```groovy
 grant all privileges on database sampledb1 to musab;
+```
+```groovy
 \q
-Python Flask example:
+```
+## Python Flask example:
 
 
 ```python
@@ -26,7 +38,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://musab:123qwe@localhost:5432/sampledb1"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://musab:123qwe@localhost:5432/sampledb1" //musab is username and 123qwe is passowrd
 db = SQLAlchemy(app)
 db.create_all()
 migrate = Migrate(app, db)
@@ -105,7 +117,7 @@ def handle_car(car_id):
 
 
 
-With Authentication:
+## With Authentication:
 
 ```python
 from os import abort
