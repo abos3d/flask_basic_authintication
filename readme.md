@@ -258,3 +258,37 @@ def verify_password(username, password):
    g.user = user
    return True
 ```
+
+```groovy
+Brew install python3
+```
+```groovy
+pip3 install virtualenv   
+```
+```groovy
+cd to directory
+```
+```groovy
+mkdir your project folder
+```
+```groovy
+python3 -m venv venv  
+```
+```groovy
+. venv/bin/activate
+```
+```groovy
+pip3 install flask
+```
+```groovy
+export FLASK_APP=main.py //need to run onetime
+```
+
+```groovy
+Flask run
+```
+
+
+```groovy
+deactivate
+```
